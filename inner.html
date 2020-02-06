@@ -101,21 +101,34 @@
   	<footer>
       <section>
         <img src="img/map.jpg" width="1440" height="416" alt="map">
+        <div class="popup email_form">
+          <a class="close" href="#">Close</a>
+          <h2>Напишите нам</h2>
+          <form method="post" action="">
+            <label for="name">Ваше имя:</label>
+            <input type="text" name="name" placeholder="Имя Фамилия">
+            <label for="email">Ваш email:</label>
+            <input type="text" name="email">
+            <label for="email-body">Текст письма:</label>
+            <input type="text" name="email-body" placeholder="В свободной форме">
+            <input type="submit" value="Отправить"> 
+          </form>
+        </div>
       </section>
   		<section>
   			<ul>
   				<li>
-  					<a href="">
+  					<a href="" aria-label="Vkontakte">
   						<img src="vk-logo.jpg" alt="Вконтакте">
   					</a>
   				</li>
   				<li>
-  					<a href="">
+  					<a href="" aria-label="Facebook">
   						<img src="fb-logo.jpg" alt="Facebook">
   					</a>
   				</li>
   				<li>
-  					<a href="">
+  					<a href="" aria-label="Instagram">
   						<img src="inst-logo.jpg" alt="Instagram">
   					</a>
   				</li>
