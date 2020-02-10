@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -26,48 +29,51 @@
       <button type="button">Корзина</button>    
     </header>
   	<main>
-  		<section>
+  		<section class="advantages">
   			<h2>Долго, дорого, скрупулезно</h2>
   			<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
         <a href="">Узнать больше</a>
         <img src="img/slide-picture1.png" width="698" height="413" alt="Слайд1">
   		</section>
-      <section>
+      <section class="advantages">
         <h2>Любим математику как никто другой</h2>
         <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-        <a href="">Узнать больше</a>
+        <button type="button">
+          <a href="">Узнать больше</a>
+        </button>
         <img src="img/slide-picture2.png" width="663" height="430" alt="Слайд2">
       </section>
-      <section>
+      <section class="advantages">
         <h2>Только ночь, только хардкор</h2>
         <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
         <a href="">Узнать больше</a>
         <img src="img/slide-picture3.png" width="759" height="411" alt="Слайд3">
       </section>
-  		<section>
+  		<section class="offers">
   			<h2 class="visually-hidden">Офферы</h2>
   			<ul>
-  				<li>
+  				<li class="offer-1">
             <h3>Веб-сайты</h3>
   					<img src="img/advantage-picture-red.jpg" width="300" height="146" alt="вебсайты">
   					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
   					<a href="">Заказать</a>
   				</li>
-  				<li>
+  				<li class="offer-2">
             <h3>Приложения</h3>
   					<img src="img/advantage-picture-green.jpg" width="300" height="146" alt="приложения">
   					<p>Покорите топ-10 приложений в AppStore и Google Play</p>
   					<a href="">Заказать</a>
   				</li>
-  				<li>
+  				<li class="offer-3">
             <h3>Презентации</h3>
   					<img src="img/advantage-picture-yellow.jpg" width="300" height="146" alt="презентации">
   					<p>Вы даже не подозреваете, насколько вы изумительны!</p>
   					<a href="">Заказать</a>
   				</li>
   			</ul>
+        <hr>
   		</section>
-  		<section>
+  		<section class="about-company">
   			<h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
   			<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
   			<h3>Выполняем заказы на разработку:</h3>
@@ -76,23 +82,23 @@
   				<li>Мобильных приложений для iOS и Android</li>
   				<li>Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
-        <p>с 2004 года Любим точность во всем:</p>
+        <p class="right-side">с 2004 года Любим точность во всем:</p>
         <ul>
           <li>
-            <p>146%</p>
+            <p class="percentage">146%</p>
             <p>Уровень самоотдачи</p>
           </li>
           <li>
-            <p>100%</p>
+            <p class="percentage">100%</p>
             <p>Соблюдение сроков</p>
           </li>
           <li>
-            <p>50%</p>
+            <p class="percentage">50%</p>
             <p>Минимальная предоплата</p>
           </li>
         </ul>
       </section>
-  		<section>
+  		<section class="partners">
   			<ul>
   				<li>
   					<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML-академия">
@@ -115,32 +121,19 @@
   					</a>
   				</li>
   			</ul>
-  		</section>
-  	</main>
-  	<footer>
-      <section>
+  		</section>  	
+      <section class="map">
         <img src="img/map.jpg" width="1440" height="416" alt="Карта">
-        <div class="popup email_form">
-          <button type="button"></button>
-          <h2>Напишите нам</h2>
-          <form method="post" action="">
-            <label id="name">Ваше имя:</label>
-            <input type="text" name="name" placeholder="Имя Фамилия">
-            <label id="email">Ваш email:</label>
-            <input type="text" name="email">
-            <label id="email-body">Текст письма:</label>
-            <textarea name="email-body" placeholder="В свободной форме"></textarea>
-            <button type="submit">Отправить</button> 
-          </form>
-        </div>
       </section>
-      <section>
-        <h3>Контакты</h3>
+      <section class="contacts">
+        <h3 class="visually-hidden">Контакты</h3>
         <p>Nёrds Design Studio</p>
         <address>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. <a href="tel:+7(812)275-75-75">+7 (812) 275-75-75</a></address>
         <button type="submit">Напишите нам</button>
       </section>
-  		<section>
+      </main>
+      <footer>
+  		<section class="social">
   			<ul>
   				<li>
   					<a href="" aria-label="Vkontakte">
@@ -158,9 +151,22 @@
   					</a>
   				</li>
   			</ul>
-  			<p>Давайте дружить это выгодно!</p>
-  			<p>Скидка 10% для друзей из социальных сетей.</p>
+  			<p class="cta">Давайте дружить это выгодно!</p>
+  			<p class="discount">Скидка 10% для друзей из социальных сетей.</p>
   		</section>
   	</footer>
+    <div class="popup email_form">
+          <button type="button"></button>
+          <h2>Напишите нам</h2>
+          <form method="post" action="">
+            <label id="name">Ваше имя:</label>
+            <input type="text" name="name" placeholder="Имя Фамилия">
+            <label id="email">Ваш email:</label>
+            <input type="text" name="email">
+            <label id="email-body">Текст письма:</label>
+            <textarea name="email-body" placeholder="В свободной форме"></textarea>
+            <button type="submit">Отправить</button> 
+          </form>
+        </div>
   </body>
 </html>
