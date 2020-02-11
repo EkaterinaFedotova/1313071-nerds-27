@@ -18,13 +18,13 @@ a {
 	background-color: #eeeeee;
 }
 
-.navigation-main a {
+.main-navigation a {
 	color: #000000;
 	line-height: 30px;
 	text-transform: uppercase;
 }
 
-.navigation-main ul {
+.main-navigation ul {
 	list-style: none;
 }
 
