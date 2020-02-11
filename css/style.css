@@ -12,14 +12,13 @@ body {
 
 a {
 	text-decoration: none;
-	color: #000000;
 }
 
 header {
 	background-color: #eeeeee;
 }
 
-.main-navigtion {
+.nav a {
 	color: #000000;
 	line-height: 30px;
 	text-transform: uppercase;
