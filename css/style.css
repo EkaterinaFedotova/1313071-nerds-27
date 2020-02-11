@@ -24,7 +24,7 @@ a {
 	text-transform: uppercase;
 }
 
-.navigation-main ul {
+ul.navigation-main {
 	list-style: none;
 }
 
