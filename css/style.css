@@ -14,14 +14,17 @@ a {
 	text-decoration: none;
 }
 
-header {
+.header {
 	background-color: #eeeeee;
 }
 
-nav a {
+.navigation-main a {
 	color: #000000;
 	line-height: 30px;
 	text-transform: uppercase;
+}
+
+.navigation-main ul {
 	list-style-type: none;
 }
 
