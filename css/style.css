@@ -4,7 +4,7 @@ body {
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 24px;
-	font-weight: normal;
+	font-weight: 400;
 	color: #000000;
 
 	background-color: #ffffff;
@@ -12,6 +12,17 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0px;
+	padding: 0px;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .header {
@@ -34,7 +45,8 @@ a {
 
 .advantages h2 {
 	font-size: 55px;
-	line-height: 55px;	
+	line-height: 55px;
+	font-weight: 500;	
 }
 
 .advantages a {
@@ -49,26 +61,15 @@ a {
 	background-color: #fb565a;  
 }
 
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0px;
-	padding: 0px;
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
-
 .offers h3{
 	font-size: 24px;
 	line-height: 30px;
 	text-transform: uppercase;
 }
 
-.offer-1 button,
-.offer-2 button,
-.offer-3 button {
+.offer-1 a,
+.offer-2 a,
+.offer-3 a {
 	color: #ffffff;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -95,13 +96,13 @@ a {
 
 .about-company h3,
 .about-company .right-side {
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
 .percentage {
 	font-size: 45px;
-	line-height: 10px;	
+	line-height: 45px;	
 	list-style: none;
 }
 
@@ -113,7 +114,7 @@ a {
 .contacts p {
 	font-size: 18px;
 	line-height: 30px;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
@@ -139,4 +140,8 @@ footer .cta {
 footer .discount {
 	color: #444444;
 	line-height: 22px;
+}
+
+.popup .email_form {
+	display:  none;
 }
