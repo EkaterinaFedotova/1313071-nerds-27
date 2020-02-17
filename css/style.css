@@ -6,7 +6,6 @@ body {
 	line-height: 24px;
 	font-weight: 400;
 	color: #000000;
-
 	background-color: #ffffff;
 }
 
@@ -29,14 +28,33 @@ a {
 	background-color: #eeeeee;
 }
 
+.header a:hover {
+	opacity: 0.8
+}
+
+.header a:active {
+	opacity: 0.3
+}
+
 .main-navigation a {
 	color: #000000;
 	line-height: 30px;
 	text-transform: uppercase;
 }
 
+.main-navigation a:hover {
+	color: #fb565a;
+}
+
+.main-navigation a:active {
+	color: (0, 0, 0, 0.3);
+}
+
 .main-navigation ul {
 	list-style: none;
+}
+
+.cart {
 }
 
 .advantages {
@@ -53,18 +71,57 @@ a {
 	color: #ffffff;
 	line-height: 18px;
 	background-color: #fb565a;
-}
-
-.advantages button {
 	width: 240px;
 	height: 50px;
-	background-color: #fb565a;  
+	border: 1px solid #fb565a;
+	border-radius: 5px; 
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;/*почему-то текст не встает по центру((*/
+}
+
+.red-button:hover {
+	background-color: #e74246;
+}
+
+.red-button:active {
+	/*не работает почему-то такая стилизация*/
+	color: (255, 255, 255, 0.3);
+	background-color: (0, 1, 1, 0.1); 
+}
+
+.green-button:hover {
+	background-color: #00bc6c;
+}
+
+.green-button:active {
+	/*не работает почему-то такая стилизация, еще смущает, что я одни цвета в хексе писала, а тут в ргб*/
+	color: (255, 255, 255, 0.3);
+	background-color: (0, 1, 1, 0.1); 
+}
+
+.yellow-button:hover {
+	background-color: #eab534;
+}
+
+.yellow-button:active {
+	/*не работает почему-то такая стилизация*/
+	color: (255, 255, 255, 0.3);
+	background-color: (0, 1, 1, 0.1); 
+}
+
+.offers {
+	background-color: #ffffff;
 }
 
 .offers h3{
 	font-size: 24px;
 	line-height: 30px;
 	text-transform: uppercase;
+}
+
+.offers ul {
+	list-style: none;
 }
 
 .offer-1 a,
@@ -77,16 +134,29 @@ a {
  	height: 50px;
 }
 
-.offer-1 button {	
+.offer-1 a {	
  	background-color: #fb565a;
+ 	border: 1px solid #fb565a;
+ 	border-radius: 5px;
+ 	vertical-align: middle;
 }
 
-.offer-2 button {
+.offer-2 a {
  	background-color: #00ca74;
+ 	border: 1px solid #00ca74;
+ 	border-radius: 5px;
+ 	vertical-align: middle;
 }
 
-.offer-3 button 
+.offer-3 a { 
  	background-color: #efc84a;
+ 	border: 1px solid #efc84a;
+ 	border-radius: 5px;
+ 	vertical-align: middle;
+}
+
+.about-company {
+	background-color: #ffffff;
 }
 
 .about-company h2 {
@@ -94,21 +164,55 @@ a {
 	line-height: 45px;
 }
 
-.about-company h3,
-.about-company .right-side {
+.numbers-description,
+.percentage{
 	font-weight: 700;
 	text-transform: uppercase;
 }
 
-.percentage {
+.percentage{
 	font-size: 45px;
 	line-height: 45px;	
 	list-style: none;
 }
 
-.about-company li {
+.numbers ul{
+	list-style: none;
+}
+
+.service-description li {
 	line-height: 18px;
-	list-style-type: square;
+	list-style-type: square; /*не знаю, как сделать маркеры списка дефисами*/
+}
+
+.partners {
+	background-color: #ffffff;
+}
+
+.partners ul {
+	list-style: none;
+}
+
+.partners a {
+	opacity: 0.2; /*Кажется, чтов  зеплине неправильно указана позрачность, слишком светлый получается в сравнении с макетом*/
+	background-color: #ffffff; /*откуда-то взялись бордеры и заливка фона, так и не поняла откуда*/
+	border: none;
+}
+
+.partners a:hover {
+	opacity: 0.9; /*не понимаю, как сделать такой же темный цвет или полную непрозрачность*/
+	background-color: #ffffff;
+	border: none;
+}
+
+.partners a:active {
+	opacity: 0.1; /*Кажется, чтов  зеплине неправильно указана позрачность, слишком светлый получается в сравнении с макетом*/
+	background-color: #ffffff;
+	border: none;
+}
+
+.contacts {
+	background-color: #ffffff;
 }
 
 .contacts p {
@@ -118,8 +222,8 @@ a {
 	text-transform: uppercase;
 }
 
-.contacts address,
-.contacts a {
+.contacts .address,
+.contacts .telephone {
 	color: #666666;
 	line-height: 18px;
 }
@@ -129,6 +233,27 @@ a {
 	width: 219px;
 	height: 50px;
  	background-color: #fb565a;
+ 	border-radius: 5px;
+}/*почему-то применяется и к номеру телефона, хотя мне кажется, что применяется стиль от кнопки с достоинствами*/
+
+.social a {
+	width: 79px;
+	height: 79px;
+	background-color: #e1e1e1;
+	/*не понимаю, как сделать круглый фон и как сделать так, чтобы он был нормального размера, размеры из зеплина как-то странно отображаются*/
+}
+
+.social a:hover {
+	background-color: #e74246;
+}
+
+.social a:active {
+	opacity:  0.3;
+ 	background-color: #d7373b;/*не понимаю, почему прозрачность применяется к фону тоже...*/
+}
+
+.social ul {
+	list-style: none;
 }
 
 footer .cta {
@@ -142,6 +267,115 @@ footer .discount {
 	line-height: 22px;
 }
 
-.popup .email_form {
+.popup {
 	display:  none;
+	background-color: #ffffff;
+}
+
+.popup h2 {
+	font-size: 45px;
+	font-weight: 500;
+}
+
+.popup label {
+	font-size: 16px;
+	font-weight: 700;
+
+}
+
+.popup input {
+	width: 360px;
+	height: 50px;
+	border: solid 2px #d7dcde;
+}
+
+.popup input:hover {
+	border: solid 2px #b4b9bb;
+}
+
+.popup input:focus {
+	border: solid 2px #000000;
+}
+
+.popup input:invalid {
+	border: solid 2px #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
+}
+
+.popup textarea {
+	width: 760px;
+ 	height: 118px;
+ 	border: solid 2px #d7dcde;
+}
+
+.popup .button {
+	color: #ffffff;
+	width: 260px;
+ 	height: 50px;
+	background-color: #fb565a;
+}
+
+/*Страница каталога*/
+.header {
+	background-color: #eeeeee;
+}
+
+.header a:hover {
+	opacity: 0.8
+}
+
+.header a:active {
+	opacity: 0.3
+}
+
+.index-navigation a {
+	color: #000000;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.index-navigation a:hover {
+	color: #fb565a;
+}
+
+.index-navigation a:active {
+	color: (0, 0, 0, 0.3);
+}
+
+.index-navigation ul {
+	list-style: none;
+}
+
+.cart {
+}
+
+.catalog-title {
+	font-size: 55px;
+	line-height: 55px;
+	font-weight: 500;
+}
+
+.form h2 {
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase; /*почему-то не работает(( хотя остальные стили применились к этим заголовкам*/
+}
+
+.price-slider {
+	width: 261px;
+ 	height: 81px;
+	background-color: #eeeeee;
+}
+
+.button-show {
+	width: 260px;
+	height: 50px;
+	background-color: #eeeeee;
+}
+
+.gallery ul {
+	list-style: none;
+}
+
+.pages {
+	list-style: none;
 }
