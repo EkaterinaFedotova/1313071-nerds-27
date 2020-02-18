@@ -20,7 +20,6 @@ a {
 	margin: -1px;
 	border: 0px;
 	padding: 0px;
-	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
 
@@ -47,7 +46,7 @@ a {
 }
 
 .main-navigation a:active {
-	color: (0, 0, 0, 0.3);
+	opacity: 0.3;
 }
 
 .main-navigation ul {
@@ -86,8 +85,8 @@ a {
 
 .red-button:active {
 	/*не работает почему-то такая стилизация*/
-	color: (255, 255, 255, 0.3);
-	background-color: (0, 1, 1, 0.1); 
+	opacity: 0.3;
+	background-color: #d7373b;
 }
 
 .green-button:hover {
@@ -96,8 +95,8 @@ a {
 
 .green-button:active {
 	/*не работает почему-то такая стилизация, еще смущает, что я одни цвета в хексе писала, а тут в ргб*/
-	color: (255, 255, 255, 0.3);
-	background-color: (0, 1, 1, 0.1); 
+	opacity: 0.3;
+	background-color: #00aa62; 
 }
 
 .yellow-button:hover {
@@ -106,8 +105,8 @@ a {
 
 .yellow-button:active {
 	/*не работает почему-то такая стилизация*/
-	color: (255, 255, 255, 0.3);
-	background-color: (0, 1, 1, 0.1); 
+	opacity: 0.3;
+	background-color: #e5a722; 
 }
 
 .offers {
@@ -338,7 +337,7 @@ footer .discount {
 }
 
 .index-navigation a:active {
-	color: (0, 0, 0, 0.3);
+	opacity: 0.3;
 }
 
 .index-navigation ul {
@@ -377,5 +376,25 @@ footer .discount {
 }
 
 .pages {
+	list-style: none;
+}
+
+.social a {
+	width: 79px;
+	height: 79px;
+	background-color: #e1e1e1;
+	/*не понимаю, как сделать круглый фон и как сделать так, чтобы он был нормального размера, размеры из зеплина как-то странно отображаются*/
+}
+
+.social a:hover {
+	background-color: #e74246;
+}
+
+.social a:active {
+	opacity:  0.3;
+ 	background-color: #d7373b;/*не понимаю, почему прозрачность применяется к фону тоже...*/
+}
+
+.social ul {
 	list-style: none;
 }
