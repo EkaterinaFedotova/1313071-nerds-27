@@ -742,3 +742,97 @@ a {
 .filter-input-checkbox:active + label::before {
 	color: #4d4d4d;
 }
+
+.button-show {
+	width: 260px;
+	height: 50px;
+	background-color: #eeeeee;
+	border-radius: 5px;
+	border: none;
+}
+
+.button-show:hover {
+	background-color: #dfdfdf;
+}
+
+.button-show:active {
+	background-color: #d5d5d5;
+	color: rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.project a::before {
+	content: "";
+	margin-bottom: 40px;
+	position: absolute;
+	display: block;
+	background-image: url('../img/browser.svg');
+	width: 360px;
+	height: 40px;
+}
+
+.project a {
+	position: relative;
+}
+
+/*здесь долны быть поп-апы для ховеров проектов*/
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.pagination-item {
+  margin-right: 5px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-item a {
+  display: block;
+  padding: 10px 19px;
+  
+  color: #000000;
+
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  background-color: #dfdfdf;
+}
+
+.pagination-item a:active {
+	background-color: #d5d5d5;
+	color: rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.pagination-item-current a {
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 2px solid #dfdfdf;
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.next-page {
+	width:  260px;
+	height: 50px;
+	text-align: center;
+}
