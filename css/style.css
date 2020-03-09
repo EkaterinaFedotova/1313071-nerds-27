@@ -20,6 +20,7 @@ a {
 	margin: -1px;
 	border: 0px;
 	padding: 0px;
+	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
 
@@ -27,48 +28,58 @@ a {
 	background-color: #eeeeee;
 }
 
-.header a:hover {
-	opacity: 0.8
+.header .logo:hover {
+	opacity: 0.8;
 }
 
-.header a:active {
-	opacity: 0.3
+.header .logo:active {
+	opacity: 0.3;
 }
 
-.main-navigation a {
+.navigation a {
 	color: #000000;
 	line-height: 30px;
 	text-transform: uppercase;
 }
 
-.main-navigation a:hover {
+.navigation a:hover {
 	color: #fb565a;
 }
 
-.main-navigation a:active {
+.navigation a:active {
 	opacity: 0.3;
 }
 
-.main-navigation ul {
+.navigation ul {
 	list-style: none;
 }
 
 .cart {
+	position: relative;
+}
+
+.cart::before {
+	content: "";
+	display: block;
+	position:  absolute;
+	background: url('../img/cart-icon.svg') no-repeat center;
+	width: 15px;
+	height:  15px;
 }
 
 .advantages {
 	background-color: #eeeeee;
 }
 
-.advantages h2 {
+.slide h2 {
 	font-size: 55px;
 	line-height: 55px;
 	font-weight: 500;	
 }
 
-.advantages a {
+.slide-button {
 	color: #ffffff;
-	line-height: 18px;
+	line-height: 50px;
 	background-color: #fb565a;
 	width: 240px;
 	height: 50px;
@@ -79,13 +90,21 @@ a {
     vertical-align: middle;/*почему-то текст не встает по центру((*/
 }
 
+.slide-button:hover {
+	background-color: #e74246;
+}
+
+.slide-button:active {
+	color: rgba(255,255,255,0.3);
+	background-color: #d7373b;
+}
+
 .red-button:hover {
 	background-color: #e74246;
 }
 
 .red-button:active {
-	/*не работает почему-то такая стилизация*/
-	opacity: 0.3;
+	color: rgba(255,255,255,0.3);
 	background-color: #d7373b;
 }
 
@@ -94,8 +113,7 @@ a {
 }
 
 .green-button:active {
-	/*не работает почему-то такая стилизация, еще смущает, что я одни цвета в хексе писала, а тут в ргб*/
-	opacity: 0.3;
+	color: rgba(255,255,255,0.3);
 	background-color: #00aa62; 
 }
 
@@ -104,8 +122,7 @@ a {
 }
 
 .yellow-button:active {
-	/*не работает почему-то такая стилизация*/
-	opacity: 0.3;
+	color: rgba(255,255,255,0.3);
 	background-color: #e5a722; 
 }
 
@@ -126,31 +143,31 @@ a {
 .offer-1 a,
 .offer-2 a,
 .offer-3 a {
+	display: block;
 	color: #ffffff;
-	line-height: 18px;
+	line-height: 50px;
 	text-transform: uppercase;
 	width: 160px;
  	height: 50px;
+ 	text-align: center;
+ 	border-radius: 5px;
 }
 
 .offer-1 a {	
  	background-color: #fb565a;
- 	border: 1px solid #fb565a;
- 	border-radius: 5px;
+ 	border: 1px solid #fb565a; 	
  	vertical-align: middle;
 }
 
 .offer-2 a {
  	background-color: #00ca74;
  	border: 1px solid #00ca74;
- 	border-radius: 5px;
  	vertical-align: middle;
 }
 
 .offer-3 a { 
  	background-color: #efc84a;
  	border: 1px solid #efc84a;
- 	border-radius: 5px;
  	vertical-align: middle;
 }
 
@@ -161,6 +178,25 @@ a {
 .about-company h2 {
 	font-size: 45px;
 	line-height: 45px;
+}
+
+.service-description ul {
+	list-style: none;
+}
+
+.service-description li{
+	position: relative;
+	padding-left: 35px;
+}
+.service-description li::before {
+	content: " ";
+	position: absolute;
+	display: block;
+	left: 0;
+	top:  10px;
+	width: 25px;
+  	height: 2px;
+  	background-color: #fb565a;
 }
 
 .numbers-description,
@@ -179,11 +215,6 @@ a {
 	list-style: none;
 }
 
-.service-description li {
-	line-height: 18px;
-	list-style-type: square; /*не знаю, как сделать маркеры списка дефисами*/
-}
-
 .partners {
 	background-color: #ffffff;
 }
@@ -193,19 +224,19 @@ a {
 }
 
 .partners a {
-	opacity: 0.2; /*Кажется, чтов  зеплине неправильно указана позрачность, слишком светлый получается в сравнении с макетом*/
-	background-color: #ffffff; /*откуда-то взялись бордеры и заливка фона, так и не поняла откуда*/
+	opacity: 0.2; 
+	background-color: #ffffff; 
 	border: none;
 }
 
 .partners a:hover {
-	opacity: 0.9; /*не понимаю, как сделать такой же темный цвет или полную непрозрачность*/
+	opacity: 0.9; 
 	background-color: #ffffff;
 	border: none;
 }
 
 .partners a:active {
-	opacity: 0.1; /*Кажется, чтов  зеплине неправильно указана позрачность, слишком светлый получается в сравнении с макетом*/
+	opacity: 0.1; 
 	background-color: #ffffff;
 	border: none;
 }
@@ -227,19 +258,23 @@ a {
 	line-height: 18px;
 }
 
-.contacts button {
+.contacts-button {
 	color: #ffffff;
 	width: 219px;
 	height: 50px;
  	background-color: #fb565a;
- 	border-radius: 5px;
-}/*почему-то применяется и к номеру телефона, хотя мне кажется, что применяется стиль от кнопки с достоинствами*/
+ 	border-radius: 5px; 	
+ 	border: 1px solid #fb565a;
+}
 
 .social a {
+	display: inline-block;
 	width: 79px;
 	height: 79px;
+	line-height: 79px;
+	border-radius: 50%; 
 	background-color: #e1e1e1;
-	/*не понимаю, как сделать круглый фон и как сделать так, чтобы он был нормального размера, размеры из зеплина как-то странно отображаются*/
+	text-align: center;
 }
 
 .social a:hover {
@@ -247,21 +282,63 @@ a {
 }
 
 .social a:active {
-	opacity:  0.3;
- 	background-color: #d7373b;/*не понимаю, почему прозрачность применяется к фону тоже...*/
+	background-color: #d7373b;
+}
+
+.social a:active::before{
+	opacity: 0.3;
+}
+
+.vk,
+.fb,
+.instagram {
+	position: relative;
+}
+
+.vk::before {
+	content: "";
+	background: url('../img/vk-icon.svg') no-repeat center;
+	top: 32px;
+	left: 27px;
+	position: absolute;
+	color: #ffffff;	
+	width: 26px;
+	height: 15px;
+}
+
+.fb::before {
+	content: "";
+	background: url('../img/fb-icon.svg') no-repeat center;
+	top: 28px;
+	left: 34px;
+	position: absolute;
+	color: #ffffff;	
+	width: 12px;
+	height: 22px;
+}
+
+.instagram::before {
+	content: "";
+	background: url('../img/insta-icon.svg') no-repeat center;
+	top: 29px;
+	left: 29px;
+	position: absolute;
+	color: #ffffff;	
+	width: 21px;
+	height: 21px;
 }
 
 .social ul {
 	list-style: none;
 }
 
-footer .cta {
+.footer .cta {
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
 }
 
-footer .discount {
+.footer .discount {
 	color: #444444;
 	line-height: 22px;
 }
@@ -313,51 +390,116 @@ footer .discount {
 	background-color: #fb565a;
 }
 
-/*Страница каталога*/
-.header {
-	background-color: #eeeeee;
-}
-
-.header a:hover {
-	opacity: 0.8
-}
-
-.header a:active {
-	opacity: 0.3
-}
-
-.index-navigation a {
-	color: #000000;
-	line-height: 30px;
-	text-transform: uppercase;
-}
-
-.index-navigation a:hover {
-	color: #fb565a;
-}
-
-.index-navigation a:active {
-	opacity: 0.3;
-}
-
-.index-navigation ul {
-	list-style: none;
-}
-
-.cart {
-}
+/*страница каталога*/
 
 .catalog-title {
 	font-size: 55px;
 	line-height: 55px;
 	font-weight: 500;
+	background-color: #eeeeee;
 }
 
-.form h2 {
-	font-size: 18px;
-	font-weight: 700;
-	text-transform: uppercase; /*почему-то не работает(( хотя остальные стили применились к этим заголовкам*/
+.filter-item {
+  margin: 0;
+  padding: 0;
+  
+  border: none;
+  }
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
 }
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  background-color: #f1f1f1;
+  
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 10px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
 
 .price-slider {
 	width: 261px;
@@ -379,22 +521,224 @@ footer .discount {
 	list-style: none;
 }
 
-.social a {
-	width: 79px;
-	height: 79px;
-	background-color: #e1e1e1;
-	/*не понимаю, как сделать круглый фон и как сделать так, чтобы он был нормального размера, размеры из зеплина как-то странно отображаются*/
+.price-slider {
+	cursor: pointer;
 }
 
-.social a:hover {
-	background-color: #e74246;
+.sort {
+	margin: 0;
+  	padding: 0;
+	border: none;
 }
 
-.social a:active {
-	opacity:  0.3;
- 	background-color: #d7373b;/*не понимаю, почему прозрачность применяется к фону тоже...*/
+.sort legend {
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
-.social ul {
-	list-style: none;
+.sort a {
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.sort a:hover {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.sort a:active {
+	color: #000000;
+}
+
+.sort a:visited {
+	color: #000000;
+}
+
+.down-dir::before {
+	content: "";
+	background: url('../img/icon-down-dir.svg') no-repeat center;
+	display: block;
+	position: absolute;
+	width: 11px;
+	height: 10px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.up-dir::before {
+	content: "";
+	background: url('../img/icon-up-dir.svg') no-repeat center;
+	display: block;
+	position: absolute;
+	width: 11px;
+	height: 10px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.down-dir::before:hover,
+.up-dir::before:hover {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.down-dir::before:active,
+.up-dir::before:active {
+	color: #000000;
+}
+
+.layout {
+	margin: 0;
+  	padding: 0;
+	border: none;
+}
+
+.layout legend {
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/*пробный*/
+
+.layout ul {
+	padding: 0;
+  	margin: 0;
+  
+  	list-style: none;
+  	line-height: 18px;
+}
+
+.filters {
+  /*width: 180px;*/
+}
+
+.filter fieldset {
+  	padding: 0;
+  	margin: 0;
+  	margin-bottom: 27px;
+  
+  	border: none;
+}
+
+.filter fieldset:first-child {
+  	margin-bottom: 56px;
+}
+
+.filter fieldset:nth-child(2) {
+	margin-bottom: 59px;
+}
+
+.filter legend {
+  	margin-bottom: 27px;
+  
+  	font-size: 24px;
+  	line-height: 30px;
+}
+
+.filter ul {
+ 	padding: 0;
+  	margin: 0;
+  
+  	list-style: none;
+  	line-height: 18px;
+}
+
+.filter-option {
+  	margin-bottom: 19px;
+  	padding-left: 141px;
+}
+
+.filter-option label {
+  	position: relative;
+
+  	display: block;
+
+  	cursor: pointer;
+  	user-select: none;
+}
+
+.filter-input-radio + label::before {
+  	content: "";
+
+  	position: absolute;
+  	left: -42px;
+  	top: -1px;
+
+  	width: 25px;
+  	height: 25px;
+  
+  	border: 4px solid rgba(40,49,54,0.4);
+  	border-radius: 50%;
+}
+
+.filter-input:disabled + label {
+	color: rgba(40, 49, 54, 0.3);
+}
+
+.features legend {
+	margin-bottom: 27px;
+  
+  	font-size: 24px;
+  	line-height: 30px;
+}
+
+.filter-input-radio:checked + label::after {
+  	content: "";
+
+  	position: absolute;
+  	top: 9px;
+  	left: -32px;
+
+  	width: 12.5px;
+ 	height: 12.5px;
+
+  	background-color: rgba(40,49,54,0.4);
+  	border-radius: 50%;
+}
+
+.filter-input-radio:hover + label::before {
+	border-color: #4d4d4d;
+}
+
+.filter-input-radio:hover + label::after {
+	background-color: #4d4d4d;
+}
+
+.filter-input-checkbox:not(checked) + label::before {
+  	content: "";
+  	position: absolute;
+  	left: -42px;
+  	top: 0;
+
+  	width: 23px;
+ 	height: 23px;
+
+  	background-image: url('../img/checkbox-off.svg');
+  	opacity: 0.4;
+  	background-repeat: no-repeat;
+ 	background-position: 0 0;
+}
+
+.filter-input-checkbox:checked +label:before{
+  content: "";
+
+  position: absolute;
+  top: 0px;
+  left: -42px;
+
+  width: 23px;
+  height: 23px;
+  
+  background-image: url('../img/checkbox-on.svg');
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:hover {
+	color: #4d4d4d;
+}
+
+.filter-input-checkbox:active + label::before {
+	color: #4d4d4d;
 }

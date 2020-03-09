@@ -9,8 +9,8 @@
   </head>
   <body>
     <header class="header">
-        <a href=""><img src="img/nerds-logo.svg" width="65" height="160" alt="Логотип Нёрдс"></a>
-      <nav class="main-navigation">
+        <a class="logo" href=""><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
+      <nav class="navigation">
       <ul>
         <li>
           <a href="">Студия</a>
@@ -19,7 +19,7 @@
           <a href="">Клиенты</a>
         </li>
         <li>
-          <a href="inner.html">Магазин</a>
+          <a href="nerds-catalog.html">Магазин</a>
         </li>
         <li>
           <a href="">Контакты</a>
@@ -32,22 +32,22 @@
     </header>
   	<main>
       <div class="advantages">
-  		  <section>
+  		  <section class="slide">
   			 <h2>Долго, дорого, скрупулезно</h2>
   			 <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-         <a href="">Узнать больше</a>
+         <a class="slide-button" href="">Узнать больше</a>
          <img src="img/slide-picture1.png" width="698" height="413" alt="Слайд1">
   		  </section>
-        <section>
+        <section class="slide">
           <h2>Любим математику как никто другой</h2>
           <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-          <a href="">Узнать больше</a>
+          <a class="slide-button" href="">Узнать больше</a>
           <img src="img/slide-picture2.png" width="663" height="430" alt="Слайд2">
         </section>
-        <section>
+        <section class="slide">
           <h2>Только ночь, только хардкор</h2>
           <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-          <a href="">Узнать больше</a>
+          <a class="slide-button" href="">Узнать больше</a>
           <img src="img/slide-picture3.png" width="759" height="411" alt="Слайд3">
         </section>
       </div>
@@ -135,29 +135,26 @@
         <h3 class="visually-hidden">Контакты</h3>
         <p>Nёrds Design Studio</p>
         <address class="address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. <a class="telephone" href="tel:+7(812)275-75-75">+7 (812) 275-75-75</a></address>
-        <button type="submit">Напишите нам</button>
+        <button class="contacts-button" type="submit">Напишите нам</button>
       </section>
       </main>
       <footer class="footer">
   		<section class="social">
   			<ul>
   				<li>
-  					<a href="" aria-label="Vkontakte">
-  						<img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте">
+  					<a class="vk" href="" aria-label="Vkontakte">
   					</a>
   				</li>
   				<li>
-  					<a href="" aria-label="Facebook">
-  						<img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
+  					<a class="fb" href="" aria-label="Facebook">
   					</a>
   				</li>
   				<li>
-  					<a href="" aria-label="Instagram">
-  						<img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
+  					<a class="instagram" href="" aria-label="Instagram">
   					</a>
   				</li>
   			</ul>
-  			<p class="cta">Давайте дружить это выгодно!</p>
+  			<p class="cta">Давайте дружить, это выгодно!</p>
   			<p class="discount">Скидка 10% для друзей из социальных сетей.</p>
   		</section>
   	</footer>
@@ -166,11 +163,11 @@
           <h2>Напишите нам</h2>
           <form method="post" action="#">
             <label id="name">Ваше имя:</label>
-            <input type="text" name="name" placeholder="Имя Фамилия">
+            <input type="text" name="name" for="name" placeholder="Имя Фамилия">
             <label id="email">Ваш email:</label>
-            <input type="text" name="email" placeholder="email@example.com">
+            <input type="text" name="email" for="email" placeholder="email@example.com">
             <label id="email-body">Текст письма:</label>
-            <textarea name="email-body" placeholder="В свободной форме"></textarea>
+            <textarea name="email-body" for="email-body" placeholder="В свободной форме"></textarea>
             <button class="button" type="submit">Отправить</button> 
           </form>
         </div>

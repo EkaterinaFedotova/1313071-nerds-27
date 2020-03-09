@@ -9,8 +9,8 @@
   </head>
   <body>
   	<header class="header">
-        <a href="index.html"><img src="img/nerds-logo.svg" width="65" height="160" alt="Логотип Нёрдс"></a>
-      <nav class="index-navigation">
+        <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
+      <nav class="navigation">
   		  <ul>
   			  <li>
             <a href="">Студия</a>
@@ -19,7 +19,7 @@
             <a href="">Клиенты</a>
           </li>
   			  <li>
-            <a href="inner.html">Магазин</a>
+            <a href="nerds-catalog.html">Магазин</a>
           </li>
   			  <li>
             <a href="">Контакты</a>
@@ -32,29 +32,78 @@
   	</header>
   	<main>
       <h1 class="catalog-title">Магазин готовых шаблонов</h1>
-    <form class="form">
-      <h2>Стоимость:</h2>
-      <input class="price-slider" type="range" min="0" max="30000" step="50" value="15000">
-
-      <h2>Сортировать:</h2>
-      <!--похоже сюда надо подключать скрипт, но я покопалась, нашла, но не уверена, что он будет работать, нам по идее же должны выдать скрипты, нужна помощь-->
-      <a href="">по цене</a>
-      <a href="">по типу</a>
-      <a href="">по названию</a> 
-      <a href=""></a>
-      <a href=""></a>  
-      <h2>Сетка:</h2>
-      <input type="radio" checked> <span>Адаптивная</span>
-      <input type="radio"> <span>Фиксированная</span>
-      <input type="radio"> <span>Резиновая</span>
-      <h2>Особенности:</h2>
-      <input type="checkbox" checked> <span>Слайдер</span>
-      <input type="checkbox"> <span>Блок преимуществ</span>
-      <input type="checkbox"> <span>Новости</span>
-      <input type="checkbox"> <span>Галерея</span>
-      <input type="checkbox"> <span>Корзина</span>
-      <button class="button-show" type="button">Показать</button>
+      <section class="filters">
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-item">
+            <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="margin-left: 0%; width: 70%"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">от<input name="min-price" type="number" value="0"></label>
+                  <label class="max-price">до<input name="max-price" type="number" value="15000"></label>
+                </div>
+              </div>
+          </fieldset>
+          <fieldset class="sort">
+            <legend>Сортировать:</legend>
+            <a href="">по цене</a>
+            <a href="">по типу</a>
+            <a href="">по названию</a>
+            <a class="down-dir" href=""></a>
+            <a class="up-dir" href=""></a>
+          </fieldset> 
+          <fieldset class="layout">
+            <legend>Сетка:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" id="adaptive" name="layout" value="adaptive"
+         checked>
+                <label for="adaptive">Адаптивная</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" id="fixed" name="layout" value="fixed">
+                <label for="fixed">Фиксированная</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" id="stetch" name="layout" value="stetch">
+                <label for="stetch">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="features">
+            <legend>Особенности:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-slider" checked> 
+                  <label for="filter-slider">Слайдер</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-advantages"> 
+                  <label for="filter-advantages">Блок преимуществ</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-news" checked> 
+                  <label for="filter-news">Новости</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-gallery"> 
+                  <label for="filter-gallery">Галерея</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-cart"> 
+                  <label for="filter-cart">Корзина</label>
+                </li>
+              </ul>
+            <button class="button-show" type="button">Показать</button>
+          </fieldset>
     </form>
+  </section>
     <div class="gallery">
       <ul>
         <li>
@@ -126,7 +175,7 @@
             </a>
   				</li>
   			</ul>
-  			<p>Давайте дружить это выгодно!</p>
+  			<p>Давайте дружить, это выгодно!</p>
   			<p>Скидка 10% для друзей из социальных сетей.</p>
   		</section>
       <div class="gallery-focus visually-hidden">
