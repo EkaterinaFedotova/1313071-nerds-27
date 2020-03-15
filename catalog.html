@@ -8,10 +8,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-  	<header class="header">
+  	<header class="catalog-header header">
         <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
       <nav class="navigation">
-  		  <ul>
+  		  <ul class="navigation-list">
   			  <li>
             <a href="">Студия</a>
           </li>
@@ -24,9 +24,7 @@
   			  <li>
             <a href="">Контакты</a>
           </li>
-          <li>
-            <a class="cart" href="">Корзина</a>
-          </li>    
+          <a class="cart" href="">Корзина</a>   
         </ul>
       </nav>
   	</header>
@@ -61,16 +59,16 @@
           <fieldset class="layout">
             <legend>Сетка:</legend>
             <ul>
-              <li class="filter-option">
+              <li class="filter-option radio">
                 <input class="visually-hidden filter-input filter-input-radio" type="radio" id="adaptive" name="layout" value="adaptive"
          checked>
                 <label for="adaptive">Адаптивная</label>
               </li>
-              <li class="filter-option">
+              <li class="filter-option radio">
                 <input class="visually-hidden filter-input filter-input-radio" type="radio" id="fixed" name="layout" value="fixed">
                 <label for="fixed">Фиксированная</label>
               </li>
-              <li class="filter-option">
+              <li class="filter-option radio">
                 <input class="visually-hidden filter-input filter-input-radio" type="radio" id="stetch" name="layout" value="stetch">
                 <label for="stetch">Резиновая</label>
               </li>
@@ -79,23 +77,23 @@
           <fieldset class="features">
             <legend>Особенности:</legend>
               <ul>
-                <li class="filter-option">
+                <li class="filter-option checkbox">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-slider" checked> 
                   <label for="filter-slider">Слайдер</label>
                 </li>
-                <li class="filter-option">
+                <li class="filter-option checkbox">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-advantages"> 
                   <label for="filter-advantages">Блок преимуществ</label>
                 </li>
-                <li class="filter-option">
+                <li class="filter-option checkbox">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-news" checked> 
                   <label for="filter-news">Новости</label>
                 </li>
-                <li class="filter-option">
+                <li class="filter-option checkbox">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-gallery"> 
                   <label for="filter-gallery">Галерея</label>
                 </li>
-                <li class="filter-option">
+                <li class="filter-option checkbox">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-cart"> 
                   <label for="filter-cart">Корзина</label>
                 </li>
@@ -105,36 +103,54 @@
     </form>
   </section>
     <div class="gallery">
-      <ul>
+      <ul class="gallery-picture">
         <li class="project">
-          <a href="">
-            <img src="img/sedona.jpg" width="360" height="576" alt="Проект Седона">
-          </a>
+          <img src="img/sedona.jpg" width="360" height="576" alt="Проект Седона">
+          <div class="gallery-focus">
+            <a href="">Sedona</a>
+            <p>Информационный сайт для туристов</p>
+            <button type="button">9 900 руб.</button>
+          </div>
         </li>
         <li class="project">
-          <a href="">
-            <img src="img/pink.jpg" width="360" height="576" alt="Проект Пинк">
-          </a>
+          <img src="img/pink.jpg" width="360" height="576" alt="Проект Пинк">
+          <div class="gallery-focus">
+            <a href="">Pink App</a>
+            <p>Продуктовый лендинг приложения для iOS и Android</p>
+            <button type="button">9 900 руб.</button>
+          </div>
         </li>
         <li class="project">
-          <a href="">
-            <img src="img/barbershop.jpg" width="360" height="576" alt="Проект Бороднский">
-          </a>
+          <img src="img/barbershop.jpg" width="360" height="576" alt="Проект Бороднский">
+          <div class="gallery-focus">
+            <a hfer="">Barbershop</a>
+            <p>Сайт салона красоты. Для мужчин, да.</p>
+            <button type="button">9 900 руб.</button>
+          </div>
         </li>
         <li class="project">
-          <a href="">
-            <img src="img/mishka.jpg" width="360" height="576" alt="Проект Мишка">
-          </a>
-        </li class="project">
-        <li class="project">
-          <a href="">
-            <img src="img/aplus.jpg" width="360" height="576" alt="Проект Аплус">
-          </a>
+          <img src="img/mishka.jpg" width="360" height="576" alt="Проект Мишка">
+          <div class="gallery-focus">
+            <a href="">Mishka</a>
+            <p>Интернет-магазин вязаных игрушек</p>
+            <button type="button">9 900 руб.</button>
+          </div>
         </li>
         <li class="project">
-          <a href="">
-            <img src="img/kvast.jpg" width="360" height="576" alt="Проект Кваст">
-          </a>
+          <img src="img/aplus.jpg" width="360" height="576" alt="Проект Аплус">
+          <div class="gallery-focus">
+            <a herf="">A Plus</a>
+            <p>Лендинг курсов повышения квалификации</p>
+            <button type="button">9 900 руб.</button>
+          </div>
+        </li>
+        <li class="project">
+          <img src="img/kvast.jpg" width="360" height="576" alt="Проект Кваст">
+          <div class="gallery-focus">
+            <a href="">Кваст</a>
+            <p>Промо-сайт производителя крафтового кваса</p>
+            <button type="button">9 900 руб.</button>
+          </div>
         </li>
       </ul> 
       <ul class="pagination-list">
@@ -150,7 +166,7 @@
       <section>
         <img src="img/map.jpg" width="1440" height="416" alt="Карта">
       </section>
-  		<section  class="social">
+  		<section class="social">
   			<ul>
   				<li>
   					<a href="" aria-label="Vkontakte">
@@ -171,36 +187,6 @@
   			<p>Давайте дружить, это выгодно!</p>
   			<p>Скидка 10% для друзей из социальных сетей.</p>
   		</section>
-      <div class="gallery-focus visually-hidden">
-        <h2>Sedona</h2>
-        <p>Информационный сайт для туристов</p>
-        <button type="button">9 900 руб.</button>
-      </div>
-      <div class="gallery-focus">
-        <h2>Pink App</h2>
-        <p>Продуктовый лендинг приложения для iOS и Android</p>
-        <button type="button">9 900 руб.</button>
-      </div>
-      <div class="gallery-focus">
-        <h2>Barbershop</h2>
-        <p>Сайт салона красоты. Для мужчин, да.</p>
-        <button type="button">9 900 руб.</button>
-      </div>
-      <div class="gallery-focus">
-        <h2>Mishka</h2>
-        <p>Интернет-магазин вязаных игрушек</p>
-        <button type="button">9 900 руб.</button>
-      </div>
-      <div class="gallery-focus">
-        <h2>A Plus</h2>
-        <p>Лендинг курсов повышения квалификации</p>
-        <button type="button">9 900 руб.</button>
-      </div>
-      <div class="gallery-focus">
-        <h2>Кваст</h2>
-        <p>Промо-сайт производителя крафтового кваса</p>
-        <button type="button">9 900 руб.</button>
-      </div>
   	</footer>
     <div class="popup">
           <button type="button"></button>
