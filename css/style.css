@@ -695,6 +695,11 @@ html { box-sizing: border-box; }
 	background-color: #eeeeee;
 }
 
+.navigation-list-current {
+  border-bottom: 2px solid #dfdfdf;
+  width: 74px;
+}
+
 .filter-item {
   margin: 0;
   padding: 0;
