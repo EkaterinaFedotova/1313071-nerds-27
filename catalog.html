@@ -10,26 +10,26 @@
   <body>
   	<header class="header">
       <div class="container">
-        <a class="logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
+          <a class="logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
         <nav class="navigation">
-  		    <ul class="navigation-list">
-  			   <li>
-            <a href="">Студия</a>
+          <ul class="navigation-list">
+            <li>
+              <a class="site-page" href="">Студия</a>
             </li>
-  			    <li>
-              <a href="">Клиенты</a>
+            <li>
+              <a class="site-page" href="">Клиенты</a>
             </li>
-  			    <li class="navigation-list-current">
-              <a href="catalog.html">Магазин</a>
+            <li>
+              <a class="site-page" href="catalog.html">Магазин</a>
             </li>
-  			    <li>
-              <a href="">Контакты</a>
+            <li>
+              <a class="site-page" href="">Контакты</a>
             </li>
-            </ul>
-            <a class="cart" href="">Корзина</a>           
-        </nav>
+          </ul>
+          <a class="cart" href="">Корзина</a>      
+        </nav>      
       </div>
-  	</header>
+    </header>
   	<main>
       <h1 class="catalog-title">Магазин готовых шаблонов</h1>     
       <div class="container"> 
@@ -102,7 +102,7 @@
         <div class="sort">
           <p>Сортировать:</p>
           <div class="sort-selectors">
-            <a href="">по цене</a>
+            <a class="is-active" href="">по цене</a>
             <a href="">по типу</a>
             <a href="">по названию</a>
             <a class="down-dir is-active" href=""></a>
@@ -172,8 +172,8 @@
        </div>  
   </div>
       <section class="map map-container">
-        <img src="img/map.jpg" height="416" alt="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-        <span class="marker" aria-label="Точка на карте"></span>
+        <img src="img/map.jpg" alt="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <img class="marker" src="img/map-marker.png" width="231" height="190" alt="Точка на карте">
       <div class="contacts contacts-container">
         <h3 class="visually-hidden">Контакты</h3>
         <p>Nёrds Design Studio</p>
@@ -205,10 +205,8 @@
         </div>
        </footer>
         <div class="popup">
-          <div class="big-title">
-            <h2>Напишите нам</h2>
-            <button class="popup-button" type="button"><span class="visually-hidden">Закрыть</span></button>            
-          </div>
+          <h2>Напишите нам</h2>
+          <button class="popup-button" type="button"><span class="visually-hidden">Закрыть</span></button>
           <div class="popup-form">
             <form method="post" action="#">
               <div class="popup-field">              
@@ -219,7 +217,7 @@
                 <label for="user-email">Ваш email:</label>
                 <input type="text" name="user-email" id="user-email" placeholder="email@example.com">
               </div>
-              <div class="popup-field">              
+              <div class="popup-field textarea">              
                 <label for="email-body">Текст письма:</label>
                 <textarea name="email-body" id="email-body" placeholder="В свободной форме"></textarea>
               </div>

@@ -8,22 +8,22 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header header">
+    <header class="header">
       <div class="container">
-          <a class="logo" href=""><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
+          <a class="logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
         <nav class="navigation">
           <ul class="navigation-list">
             <li>
-              <a href="">Студия</a>
+              <a class="site-page" href="">Студия</a>
             </li>
             <li>
-              <a href="">Клиенты</a>
+              <a class="site-page" href="">Клиенты</a>
             </li>
             <li>
-              <a href="catalog.html">Магазин</a>
+              <a class="site-page" href="catalog.html">Магазин</a>
             </li>
             <li>
-              <a href="">Контакты</a>
+              <a class="site-page" href="">Контакты</a>
             </li>
           </ul>
           <a class="cart" href="">Корзина</a>      
@@ -63,29 +63,27 @@
   		  <section class="offers">
   			 <h2 class="visually-hidden">Офферы</h2>
   			 <ul>
-  				  <li class="offer-1">
+  				  <li class="offer-main offer-1">
              <h3>Веб-сайты</h3>
   					 <img src="img/advantage-picture-red.jpg" width="300" height="146" alt="вебсайты">
   					 <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
   					 <a class="red-button" href="">Заказать</a>
   				  </li>
-  				  <li class="offer-2">
+  				  <li class="offer-main offer-2">
               <h3>Приложения</h3>
   					 <img src="img/advantage-picture-green.jpg" width="300" height="146" alt="приложения">
   					 <p>Покорите топ-10 приложений в AppStore и Google Play</p>
   					 <a class="green-button" href="">Заказать</a>
   				  </li>
-  				  <li class="offer-3">
+  				  <li class="offer-main offer-3">
               <h3>Презентации</h3>
   					 <img src="img/advantage-picture-yellow.jpg" width="300" height="146" alt="презентации">
   					 <p>Вы даже не подозреваете, насколько вы изумительны!</p>
   					 <a class="yellow-button" href="">Заказать</a>
   				  </li>
   			 </ul>
-  		  </section>
-        <hr class="separator">
-      </div>
-      <div class="container">
+         <hr class="separator">
+  		  </section>        
   		  <section class="about-company">
           <div class="service-description">
   			 <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
@@ -101,28 +99,26 @@
             <p class="numbers-description">с 2004 года Любим точность во всем:</p>
             <ul class="percentage-flex">
               <li>
-                <p class="percentage">146%</p>
-                <p>Уровень самоотдачи</p>
+                <p class="percentage">146<sup>%</sup></p>
+                <p class="small-title">Уровень самоотдачи</p>
               </li>
               <li>
-                <p class="percentage">100%</p>
-                <p>Соблюдение сроков</p>
+                <p class="percentage">100<sup>%</sup></p>
+                <p class="small-title">Соблюдение сроков</p>
               </li>
               <li>
-                <p class="percentage">50%</p>
-                <p>Минимальная предоплата</p>
+                <p class="percentage">50<sup>%</sup></p>
+                <p class="small-title">Минимальная предоплата</p>
               </li>
             </ul>
           </div>
         </section>
-      </div>
-      <hr class="separator">
-      <div class="container">
+      <hr class="separator second">
   		  <section class="partners">
   			 <ul>
   				  <li class="partner-icon">
   					 <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML-академия">
-  						  <img src="img/htmlacademy-logo.png" width="199" height="68" alt="htmlacademy-logo">
+  						  <img src="img/htmlacademy-logo.png" width="199" height="68" alt="Логотип HTML-академия">
   					 </a>
   				  </li>
   				  <li class="partner-icon">
@@ -141,12 +137,12 @@
   					 </a>
   				  </li>
   			 </ul>
-  		  </section>  
+         <hr class="separator third"> 
+  		  </section>         
       </div>
-        <hr class="separator">	
       <section class="map map-container">
-        <img src="img/map.jpg" height="416" alt="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-        <span class="marker" aria-label="Точка на карте"></span>
+        <img src="img/map.jpg" alt="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <img class="marker" src="img/map-marker.png" width="231" height="190" alt="Точка на карте">
       <div class="contacts contacts-container">
         <h3 class="visually-hidden">Контакты</h3>
         <p>Nёrds Design Studio</p>
@@ -178,10 +174,8 @@
         </div>
   	   </footer>
         <div class="popup">
-          <div class="big-title">
-            <h2>Напишите нам</h2>
-            <button class="popup-button" type="button"><span class="visually-hidden">Закрыть</span></button>            
-          </div>
+          <h2>Напишите нам</h2>
+          <button class="popup-button" type="button"><span class="visually-hidden">Закрыть</span></button>
           <div class="popup-form">
             <form method="post" action="#">
               <div class="popup-field">              
@@ -192,7 +186,7 @@
                 <label for="user-email">Ваш email:</label>
                 <input type="text" name="user-email" id="user-email" placeholder="email@example.com">
               </div>
-              <div class="popup-field">              
+              <div class="popup-field textarea">              
                 <label for="email-body">Текст письма:</label>
                 <textarea name="email-body" id="email-body" placeholder="В свободной форме"></textarea>
               </div>

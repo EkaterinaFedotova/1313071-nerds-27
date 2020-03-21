@@ -66,30 +66,28 @@ html { box-sizing: border-box; }
 
 .navigation-list {
 	display: flex;
-	flex-wrap: wrap;
-	width: 438px;
 	align-items: center;
 	justify-content: space-between;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-right: ;
 }
 
-.navigation a {
+.site-page,
+.cart {
 	color: #000000;
 	line-height: 30px;
 	text-transform: uppercase;
 }
 
-.navigation a:hover {
+.site-page:hover {
 	color: #fb565a;
 }
 
-.navigation a:active {
+.site-page:active {
+	color: #000000;
 	opacity: 0.3;
-}
-
-.navigation ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
 }
 
 .cart {
@@ -110,9 +108,23 @@ html { box-sizing: border-box; }
 	transform: translateY(-50%);
 }
 
+.cart:hover {
+	color: #fb565a;
+}
+
+.cart:active {
+	color: #adaeae;
+	opacity: 1;
+}
+/*
+.cart:hover::before,
+.cart:active::before {
+	opacity: 1;
+}*/
+
 .site-wrapper {  
 	background-color: #eeeeee;
-  	transition: background-image 0.5s ease, background-color 0.5s ease;
+	margin-bottom: 80px;
 }
 
 .slider {
@@ -179,17 +191,16 @@ html { box-sizing: border-box; }
 }
 
 .slide-button {
+	display: block;
   	color: #ffffff;
 	line-height: 50px;
 	background-color: #fb565a;
+	text-transform: uppercase;
 	width: 240px;
 	height: 50px;
 	border: 1px solid #fb565a;
-	border-radius: 5px; 
-    display: inline-block;
+	border-radius: 5px;
     text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
 }
 
 .slide-button:hover {
@@ -233,89 +244,8 @@ html { box-sizing: border-box; }
 	border-radius: 50%;
 	width: 8px;
 	height: 8px;
-
 }
 
-/* #slide-1:checked ~ .site-wrapper {
-  	background: url('../img/slide-picture1.png') no-repeat #eeeeee;
-  	background-position: right 171px center;
-  	background-size: 698px 413px;
-  }
-
-#slide-2:checked ~ .site-wrapper {
-  	background: url('../img/slide-picture2.png') no-repeat #eeeeee;
-  	background-position: right 141px center;
-  	background-size: 663px 430px;
-}
-
-#slide-3:checked ~ .site-wrapper {
-  	background: url('../img/slide-picture3.png') no-repeat #eeeeee;
-  	background-position: right 140px center;
-  	background-size: 759px 411px;
-}
-
-#slide-1:checked ~ .site-wrapper #slide1,
-#slide-2:checked ~ .site-wrapper #slide2,
-#slide-3:checked ~ .site-wrapper #slide3 {
-  	display: block;
-}
-
-#slide-1:checked ~ .site-wrapper label[for="slide-1"],
-#slide-2:checked ~ .site-wrapper label[for="slide-2"],
-#slide-3:checked ~ .site-wrapper label[for="slide-3"] {
-  	background-color: #ffffff;}
-
-*/
-
-/*конец пробник для слайдера*/
-/* удалить, если заработает слайдер
-.advantages {
-	background-color: #eeeeee;
-	box-sizing: content-box;
-}
-
-.slider-flex {
-	display: flex;
-	flex-direction: row;
-}
-
-.slide {
-	display: flex;
-	flex-direction: column;
-	width: 514px;
-	min-height: 266px;
-	padding-left: 140px;
-	top: 0;
-}
-
-.slide h2 {
-	font-size: 55px;
-	line-height: 55px;
-	font-weight: 500;	
-}
-
-.slide-button {
-	color: #ffffff;
-	line-height: 50px;
-	background-color: #fb565a;
-	width: 240px;
-	height: 50px;
-	border: 1px solid #fb565a;
-	border-radius: 5px; 
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;/*почему-то текст не встает по центру((
-}
-
-.slide-button:hover {
-	background-color: #e74246;
-}
-
-.slide-button:active {
-	color: rgba(255,255,255,0.3);
-	background-color: #d7373b;
-}
-*/
 .red-button:hover {
 	background-color: #e74246;
 }
@@ -343,15 +273,21 @@ html { box-sizing: border-box; }
 	background-color: #e5a722; 
 }
 
+.offers {
+	margin-bottom: 80px;
+}
+
 .offers img {
 	order: -1;
+	margin-bottom: 26px;
 }
 
 .offers h3{
 	font-size: 24px;
 	line-height: 30px;
 	text-transform: uppercase;
-	margin: 26px 0px;
+	margin: 0;
+	margin-bottom: 26px;
 }
 
 .offers ul {
@@ -359,20 +295,16 @@ html { box-sizing: border-box; }
 	list-style: none;
 	justify-content: space-between;
 	margin: 0;
-	margin-top: 80px;
 	padding: 0;
+	margin-bottom: 80px;
 }
 
-.offer-1,
-.offer-2,
-.offer-3 {
+.offer-main {
 	display: flex;
 	flex-direction: column;
 }
 
-.offer-1 a,
-.offer-2 a,
-.offer-3 a {
+.offer-main a {
 	display: block;
 	color: #ffffff;
 	line-height: 50px;
@@ -381,7 +313,6 @@ html { box-sizing: border-box; }
  	height: 50px;
  	text-align: center;
  	border-radius: 5px;
- 	margin-bottom: 80px;
 }
 
 .offer-1 a {	
@@ -399,9 +330,7 @@ html { box-sizing: border-box; }
  	border: 1px solid #efc84a;
 }
 
-.offer-1 p,
-.offer-2 p,
-.offer-3 p {
+.offer-main p {
 	width: 244px;
 	margin: 0;
 	margin-bottom: 35px;
@@ -413,20 +342,30 @@ html { box-sizing: border-box; }
   	color: #eeeeee;
   	background-color: #eeeeee;
   	border: 0px none;
+  	margin: 0;
+  	margin-bottom: 40px;
+}
+
+.second {
+	margin-bottom: 46px;
+}
+
+.third {
+	margin-bottom: 80px;
 }
 
 .about-company {
 	display: flex;
 	justify-content: space-between;
-	width: 1159px;
+	margin-bottom: 77px;
 }
 
 .service-description h2 {
 	font-size: 45px;
 	line-height: 45px;
+	font-weight: 500;
 	margin: 0;
 	margin-bottom: 35px;
-	margin-top: 80px;
 }
 
 .service-description {
@@ -445,18 +384,21 @@ html { box-sizing: border-box; }
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 16px;
-	padding-bottom: 12px;
+	margin-bottom: 24px;
 }
 
 .service-description ul {
 	list-style: none;
 	line-height: 24px;
+	margin: 0;
+	padding: 0;
+
 }
 
 .service-description li{
 	position: relative;
 	padding-left: 35px;
-	padding-bottom: 24px;
+	margin-bottom: 24px;
 }
 
 .service-description li::before {
@@ -484,8 +426,9 @@ html { box-sizing: border-box; }
 
 .numbers-description {
 	position: relative;
-	padding-top: 279px;
-	margin-bottom: 30px;
+	padding-top: 207px;
+	margin: 0;
+	margin-bottom: 49px;
 }
 
 .numbers-description::before {
@@ -494,22 +437,34 @@ html { box-sizing: border-box; }
 	background-image: url('../img/nerds-picture.jpg');
 	width: 360px;
 	height: 208px;
-	top: 30px;
+	top: -40px;
 	left: -17px;
 }
 
 .percentage-flex {
 	display: flex;
-	width: 360px;
 	justify-content: space-between;
 	margin: 0;
 }
 
-.percentage{	
+.percentage-flex li {
+	width: 106px;
+}
+
+.small-title {
+	margin: 0;
+}
+
+.percentage {	
 	margin: 0;
 	font-size: 45px;
-	line-height: 45px;	
-	list-style: none;
+	line-height: 45px;
+	margin-bottom: 27px;
+}
+
+.percentage sup {
+    top: -0.5em;
+    font-size: 26px;
 }
 
 .numbers ul{
@@ -523,12 +478,13 @@ html { box-sizing: border-box; }
 
 .partners ul {
 	display: flex;
-	height: 180px;
+	height: 120px;
 	list-style: none;
 	justify-content: space-around;
 	align-items: center;
 	padding: 0;
 	margin: 0;
+	margin-bottom: 44px;
 }
 
 .partners a {
@@ -545,15 +501,17 @@ html { box-sizing: border-box; }
 
 .partner-icon {
 	position: relative;
-	height: 90px;
+	width: 25%;
+	text-align: center;
 }
 
 .partner-icon::before {
 	content: "";
 	display: block;
 	position: absolute;
-	left: 125%;
-	top: 10%;
+	left: 100%;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 2px;
   	height: 52px;
   	background-color: #eeeeee;
@@ -566,24 +524,23 @@ html { box-sizing: border-box; }
 .map-container {
 	position: relative;
 	width: 100%;
+	height: 416px;
   	padding: 0px;
   	margin: 0 auto;
-  	margin-top: 80px;
   	margin-bottom: 69px;
+  	overflow: hidden;
 }
 .map img{
 	width: 100%;
-	height: 416px;
 }
 
 .marker {
-	display: block;
 	position: absolute;
-	background-image: url('../img/map-marker.png');
 	width: 231px;
 	height: 190px;
-	left: 0;
-	top: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	z-index: 1;
 }
 
@@ -592,11 +549,13 @@ html { box-sizing: border-box; }
 	padding-top: 54px;
 	padding-left: 50px;
     padding-bottom: 47px;
+    padding-right: 50px;
 	top: 54px;
-	left: 140px;
+	left: 50%;
  	width: 319px;
  	height: 308px;
  	z-index: 1;
+ 	margin-left: -560px;
 }
 
 .contacts {
@@ -637,10 +596,20 @@ html { box-sizing: border-box; }
 	color: #ffffff;
 	width: 219px;
 	height: 50px;
+	text-transform: uppercase;
  	background-color: #fb565a;
  	border-radius: 5px; 	
  	border: 1px solid #fb565a;
  	cursor: pointer;
+}
+
+.contacts-button:hover {
+	background-color: #e74246;
+}
+
+..contacts-button:active {
+	color: rgba(255,255,255,0.3);
+	background-color: #d7373b;
 }
 
 .social {
@@ -662,7 +631,7 @@ html { box-sizing: border-box; }
 }
 
 .social a {
-	display: inline-block;
+	display: block;
 	width: 79px;
 	height: 79px;
 	line-height: 79px;
@@ -736,6 +705,7 @@ html { box-sizing: border-box; }
 	line-height: 35px;
 	font-weight: bold;
 	margin: 0;
+	margin-top: 5px;
 }
 
 .footer .discount {
@@ -746,7 +716,8 @@ html { box-sizing: border-box; }
 .popup {
 	display: none; 
 	background-color: #ffffff;
-	bottom: 180px;
+	top: 50%;
+	transform: translateY(-50%);
 	left: 50%;
 	transform: translateX(-50%);
 
@@ -759,19 +730,32 @@ html { box-sizing: border-box; }
 
   	padding-top: 69px;
   	padding-left: 101px;
+  	padding-right: 100px;
+  	padding-bottom: 84px;
 }
 
 .popup-form form{
 	display: flex;
 	flex-wrap: wrap;
-	height: 254px;
-	width: 769px;
 	justify-content: space-between;
 }
 
-.popup-field textarea {
+.popup-field {
 	width: 360px;
+}
+
+.popup-field input {
+	width: 100%;
+}
+
+.textarea {
+	width: 100%;
+}
+
+.popup-field textarea {
+	display: block;
 	padding: 14px 15px;
+	width: 100%;
 }
 
 .popup h2 {
@@ -781,7 +765,6 @@ html { box-sizing: border-box; }
 
 .popup label {
 	display: block;
-	font-size: 16px;
 	font-weight: 700;
 	margin-bottom: 12px;
 }
@@ -795,39 +778,40 @@ html { box-sizing: border-box; }
 }
 
 .popup input:hover {
-	border: 2px solid #b4b9bb;
+	border: 1px solid #b4b9bb;
 }
 
 .popup input:focus {
 	border: 1px solid #000000;
-	outline-color: #000000;
+	outline: none;
 }
 
 .popup input:invalid {
-	border: 2px solid #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
+	border: 1px solid #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
 }
 
 .popup textarea:hover {
-	border: 2px solid #b4b9bb;
+	border: 1px solid #b4b9bb;
 }
 
 .popup textarea:focus {
 	border: 1px solid #000000;
-	outline-color: #000000;
+	outline: none;
 }
 
 .popup textarea:invalid {
-	border: 2px solid #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
+	border: 1px solid #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
 }
 
 .popup textarea {
 	width: 760px;
  	height: 118px;
- 	border: 2px solid #d7dcde;
+ 	border: 1px solid #d7dcde;
 }
 
 .popup .button {
 	color: #ffffff;
+	text-transform: uppercase;
 	width: 260px;
  	height: 50px;
 	background-color: #fb565a;
@@ -841,7 +825,7 @@ html { box-sizing: border-box; }
   	border: 0;
   	width: 21px;
   	height: 21px;
-  	top: 90px;
+  	top: 78px;
   	right: 90px;
 
   	cursor: pointer;
@@ -856,20 +840,23 @@ html { box-sizing: border-box; }
 	left: 0;
 	top: 0;
 	background-image: url('../img/close-cross.svg');
+	opacity: 0.3;
 }
 
-.big-title h2 {
+.popup-button:hover::before {
+	opacity: 1;
+}
+
+.popup-button:active::before {
+	opacity: 0.1;
+}
+
+.popup h2 {
 	font-size: 45px;
 	line-height: 45px;
 	font-weight: 500;
 	margin: 0;
 	margin-bottom: 49px;
-}
-
-.big-title {
-	display: flex;
-	width: 753px;
-	justify-content: space-between;
 }
 
 /*страница каталога*/
@@ -899,6 +886,10 @@ html { box-sizing: border-box; }
   width: 76px;
   height: 2px;
   background-color: #fb565a;
+}
+
+.navigation-list li {
+	margin-right: 46px;
 }
 
 .container-flex {
@@ -1045,6 +1036,7 @@ html { box-sizing: border-box; }
 
 .layout legend {
 	font-size: 18px;
+	line-height: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 27px;
@@ -1216,6 +1208,7 @@ html { box-sizing: border-box; }
 .gallery-block {
 	display: block;
 	width: 760px;
+	margin-bottom: 60px;
 }
 
 .sort {
@@ -1238,6 +1231,7 @@ html { box-sizing: border-box; }
 	display: block;
     width: 133px;
     font-size: 18px;
+    line-height: 18px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
@@ -1252,6 +1246,7 @@ html { box-sizing: border-box; }
 .sort a {
 	color: rgba(0, 0, 0, 0.3);
 	font-size: 14px;
+	line-height: 14px;
 	text-transform: uppercase;
 	position: relative;
 }
@@ -1261,10 +1256,6 @@ html { box-sizing: border-box; }
 }
 
 .sort a:active {
-	color: #000000;
-}
-
-.sort a:visited {
 	color: #000000;
 }
 
