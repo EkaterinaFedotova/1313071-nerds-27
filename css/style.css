@@ -276,12 +276,12 @@ html { box-sizing: border-box; }
 	margin-bottom: 80px;
 }
 
-.offers img {
+.offer-main img {
 	order: -1;
 	margin-bottom: 26px;
 }
 
-.offers h3{
+.offer-main h3{
 	font-size: 24px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -428,6 +428,7 @@ html { box-sizing: border-box; }
 	padding-top: 207px;
 	margin: 0;
 	margin-bottom: 49px;
+	text-align: center;
 }
 
 .numbers-description::before {
@@ -437,13 +438,15 @@ html { box-sizing: border-box; }
 	width: 360px;
 	height: 208px;
 	top: -40px;
-	left: -17px;
+	left: 0px;
 }
 
 .percentage-flex {
 	display: flex;
 	justify-content: space-between;
+	list-style: none;
 	margin: 0;
+	padding: 0;
 }
 
 .percentage-flex li {
@@ -464,11 +467,6 @@ html { box-sizing: border-box; }
 .percentage sup {
     top: -0.5em;
     font-size: 26px;
-}
-
-.numbers ul{
-	list-style: none;
-	padding: 0;
 }
 
 .partners {
@@ -522,14 +520,12 @@ html { box-sizing: border-box; }
 
 .map-container {
 	position: relative;
-	width: 100%;
 	height: 416px;
   	padding: 0px;
-  	margin: 0 auto;
   	margin-bottom: 69px;
   	overflow: hidden;
 }
-.map img{
+.map {
 	width: 100%;
 }
 
@@ -592,9 +588,12 @@ html { box-sizing: border-box; }
 }
 
 .contacts-button {
+	display: block;
 	color: #ffffff;
 	width: 219px;
 	height: 50px;
+	line-height: 50px;
+	text-align: center;
 	text-transform: uppercase;
  	background-color: #fb565a;
  	border-radius: 5px; 	
@@ -716,9 +715,8 @@ html { box-sizing: border-box; }
 	display: none; 
 	background-color: #ffffff;
 	top: 50%;
-	transform: translateY(-50%);
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, -50%);
 
 	position: fixed;
 	width: 960px;
@@ -777,35 +775,35 @@ html { box-sizing: border-box; }
 }
 
 .popup input:hover {
-	border: 1px solid #b4b9bb;
+	border: 2px solid #b4b9bb;
 }
 
 .popup input:focus {
-	border: 1px solid #000000;
+	border: 2px solid #000000;
 	outline: none;
 }
 
 .popup input:invalid {
-	border: 1px solid #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
+	border: 2px solid #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
 }
 
 .popup textarea:hover {
-	border: 1px solid #b4b9bb;
+	border: 2px solid #b4b9bb;
 }
 
 .popup textarea:focus {
-	border: 1px solid #000000;
+	border: 2px solid #000000;
 	outline: none;
 }
 
 .popup textarea:invalid {
-	border: 1px solid #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
+	border: 2px solid #e74246; /*как тут можно обозначить цвет плейсхолдера при невалидном значении?*/
 }
 
 .popup textarea {
 	width: 760px;
  	height: 118px;
- 	border: 1px solid #d7dcde;
+ 	border: 2px solid #d7dcde;
 }
 
 .popup .button {
@@ -897,11 +895,6 @@ html { box-sizing: border-box; }
 	justify-content: space-between;
 }
 
-.filters {
-	display: flex;
-	width: 261px;
-}
-
 .filter-item {
   margin: 0;
   padding: 0;
@@ -915,7 +908,7 @@ html { box-sizing: border-box; }
 
 .filter-item legend {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 30px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 56px;
@@ -998,19 +991,6 @@ html { box-sizing: border-box; }
   background: #f1f1f1;
 }
 
-.min-price input {
-	padding-left: 10px;
-}
-
-.max-price input {
-	padding-left: 13px;
-}
-
-.max-price {
-  text-align: right;
-}
-
-
 .price-slider {
 	width: 261px;
  	height: 81px;
@@ -1061,11 +1041,6 @@ html { box-sizing: border-box; }
   	margin-bottom: 56px;
 }
 
-.filter legend {  
-  	font-size: 18px;
-  	line-height: 30px;
-}
-
 .filter ul {
  	padding: 0;
   	margin: 0;
@@ -1097,12 +1072,12 @@ html { box-sizing: border-box; }
 	padding-left: 36px;
 }
 
-.filter-input-radio:not(checked) + label::before {
+.filter-input-radio + label::before {
   	content: "";
 
   	position: absolute;
   	left: 0px;
-  	top: -1px;
+  	top: 0px;
 
   	width: 25px;
   	height: 25px;
@@ -1125,18 +1100,7 @@ html { box-sizing: border-box; }
 }
 
 .filter-input-radio:checked + label::before {
-  	content: "";
-
-  	position: absolute;
-  	left: 0px;
-  	top: 0px;
-
-  	width: 25px;
- 	height: 25px;
-
   	background-image: url('../img/radio-on.svg');
-  	opacity: 0.4;
-
 }
 
 .filter-input-radio:hover + label::before {
@@ -1147,7 +1111,7 @@ html { box-sizing: border-box; }
 	opacity: 1;
 }
 
-.filter-input-checkbox:not(checked) + label::before {
+.filter-input-checkbox + label::before {
   	content: "";
   	position: absolute;
   	left: 0px;
@@ -1163,19 +1127,7 @@ html { box-sizing: border-box; }
 }
 
 .filter-input-checkbox:checked +label::before{
-  content: "";
-
-  position: absolute;
-  top: 0px;
-  left: 0px;
-
-  width: 27px;
-  height: 23px;
-  
   background-image: url('../img/checkbox-on.svg');
-  opacity: 0.4;
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 .filter-input-checkbox:hover + label::before {
@@ -1192,6 +1144,7 @@ html { box-sizing: border-box; }
 	background-color: #eeeeee;
 	border-radius: 5px;
 	border: none;
+	text-transform: uppercase;
 }
 
 .button-show:hover {
@@ -1212,13 +1165,12 @@ html { box-sizing: border-box; }
 
 .sort {
 	display: flex;
-	justify-content: space-between;
 	width: 760px;
-	height: 18px;
 	margin: 0;
   	padding: 0;
 	border: none;
 	margin-bottom: 59px;
+	text-align: center;
 }
 
 .sort-title {
@@ -1228,7 +1180,6 @@ html { box-sizing: border-box; }
 
 .sort p {
 	display: block;
-    width: 133px;
     font-size: 18px;
     line-height: 18px;
     font-weight: 700;
@@ -1238,16 +1189,31 @@ html { box-sizing: border-box; }
 
 .sort-selectors {
 	display: flex;
-	width: 359px;
-	justify-content: space-between;
+	flex-grow: 1;
+	justify-content: flex-end;
 }
 
-.sort a {
-	color: rgba(0, 0, 0, 0.3);
+.sort-selectors a {
+	color: rgba(0,0,0,0.3);
 	font-size: 14px;
 	line-height: 14px;
 	text-transform: uppercase;
 	position: relative;
+	margin-left: 26px;
+}
+
+.sort-selectors a:first-child {
+	margin-left: 0;
+}
+
+a.down-dir {
+	margin: 0;
+    margin-left: 48px;
+}
+
+a.up-dir {
+	margin: 0;
+    margin-left: 18px;
 }
 
 .sort a:hover {
@@ -1261,6 +1227,7 @@ html { box-sizing: border-box; }
 .down-dir,
 .up-dir {
 	position: relative;
+	width: 11px;
 }
 
 .down-dir::before {
@@ -1275,7 +1242,11 @@ html { box-sizing: border-box; }
 	opacity: 0.2;
 }
 
-.is-active {
+.sort-selectors a.current-selector {
+	color: rgba(0,0,0,1);
+}
+
+.is-active::before {
 	opacity: 1;
 }
 
@@ -1310,28 +1281,30 @@ html { box-sizing: border-box; }
 	padding: 0;
 }
 
-.project {
-	position: relative;
-}
-
 .gallery-focus {
-	display: none; 
+	display: block; 
 	margin: 0;	
 	padding-top: 35px;
 	padding-left: 67px;
 	padding-right: 67px;
 	padding-bottom: 43px;
 
-	width: 360px;
-  	height: 231px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+
+	width: 100%;
+  	min-height: 231px;
  	background-color: #eeeeee;
+ 	text-align: center;
+
+ 	opacity: 0;  	
+	transition: 0.2s;
 }
 
 .project:hover .gallery-focus{
 	display: block;
-	position: absolute;
-	bottom: 40px;
-	left: 0px;
+	opacity: 1;
 }
 
 .gallery-picture li {
@@ -1359,24 +1332,21 @@ html { box-sizing: border-box; }
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: 700;
-	line-height: 30px;
+	line-height: 18px;
 	color: #000000;
-	text-align: center;
 }
 
 .gallery-focus p {
 	font-size: 16px;
 	font-weight: 500;
-	line-height: 18px;
+	line-height: 16px;
 	color: #666666;
-	text-align: center;
 }
 
 .gallery-focus button {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-size: 16px;
-	line-height: 50px;
 	text-align: center;
 	font-weight: 500;
 	width: 200px;
@@ -1402,9 +1372,13 @@ html { box-sizing: border-box; }
 	background-color: #d7373b;
 }
 
-.project img {
-	position: relative;
+.project {
 	margin-bottom: 33px;
+}
+
+.project img {
+	display: block;
+	position: relative;
 }
 
 
@@ -1433,7 +1407,6 @@ html { box-sizing: border-box; }
   color: #000000;
 
   background-color: #eeeeee;
-  border-radius: 5px;
   width: 50px;
   text-align: center;
   line-height: 50px;

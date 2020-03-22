@@ -32,9 +32,7 @@
     </header>
   	<main>
       <h1 class="catalog-title">Магазин готовых шаблонов</h1>     
-      <div class="container"> 
-        <div class="container-flex">
-          <section class="filters">
+      <div class="container container-flex">
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter-item">
                 <legend>Стоимость:</legend>
@@ -47,8 +45,8 @@
                       <div class="toggle toggle-max"></div>
                     </div>
                     <div class="price-controls">
-                      <label class="min-price">от<input name="min-price" type="number" value="0"></label>
-                      <label class="max-price">до<input name="max-price" type="number" value="15000"></label>
+                      <label class="min-price">от<input name="min-price" type="text" value="0"></label>
+                      <label class="max-price">до<input name="max-price" type="text" value="15000"></label>
                     </div>
                   </div>
               </fieldset>
@@ -97,16 +95,15 @@
               </fieldset>
               <button class="button-show" type="button">Показать</button>
         </form>
-      </section>
-      <div class="gallery-block">
+      <section class="gallery-block">
         <div class="sort">
           <p>Сортировать:</p>
           <div class="sort-selectors">
-            <a class="is-active" href="">по цене</a>
+            <a class="current-selector" href="">по цене</a>
             <a href="">по типу</a>
             <a href="">по названию</a>
-            <a class="down-dir is-active" href=""></a>
-            <a class="up-dir" href=""></a>
+            <a class="down-dir is-active" href="" area-label="по убыванию"></a>
+            <a class="up-dir" href="" area-labe="по возрастанию"></a>
           </div>
         </div>     
         <div class="gallery">
@@ -167,19 +164,18 @@
             <li class="pagination-item"><a href="#">4</a></li>
             <li class="pagination-item next-page"><a href="#">Следующая</a></li>
           </ul>
-        </div>
-      </div>  
-       </div>  
+        </section>
+      </div>
   </div>
-      <section class="map map-container">
-        <img src="img/map.jpg" alt="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <section class="map-container">
+        <img class="map" src="img/map.jpg" alt="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         <img class="marker" src="img/map-marker.png" width="231" height="190" alt="Точка на карте">
       <div class="contacts contacts-container">
         <h3 class="visually-hidden">Контакты</h3>
         <p>Nёrds Design Studio</p>
         <address class="address">191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</address>
         <a class="telephone" href="tel:+7(812)275-75-75">тел. +7 (812) 275-75-75</a>         
-        <button class="contacts-button" type="submit">Напишите нам</button>
+        <a class="contacts-button">Напишите нам</a>
       </div>
       </section>
       </main>
