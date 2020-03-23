@@ -450,7 +450,8 @@ html { box-sizing: border-box; }
 }
 
 .percentage-flex li {
-	width: 106px;
+	width: 110px;
+	margin-right: 7px;
 }
 
 .small-title {
@@ -477,7 +478,7 @@ html { box-sizing: border-box; }
 	display: flex;
 	height: 120px;
 	list-style: none;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 0;
 	margin: 0;
@@ -891,8 +892,11 @@ html { box-sizing: border-box; }
 
 .container-flex {
 	display: flex;
-	width: 1160px;
 	justify-content: space-between;
+}
+
+.container-flex form {
+	width: 261px;
 }
 
 .filter-item {
@@ -907,8 +911,6 @@ html { box-sizing: border-box; }
 }
 
 .filter-item legend {
-  font-size: 18px;
-  line-height: 30px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 56px;
@@ -1337,17 +1339,18 @@ a.up-dir {
 }
 
 .gallery-focus p {
+	font-family: "Roboto-Regular", Arial, sans-serif;;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 16px;
 	color: #666666;
 }
 
-.gallery-focus button {
+a.project-button {
+	display: block;
 	color: #ffffff;
-	text-transform: uppercase;
 	font-size: 16px;
-	text-align: center;
+	line-height: 50px;
 	font-weight: 500;
 	width: 200px;
   	height: 50px;
@@ -1364,11 +1367,11 @@ a.up-dir {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.gallery-focus button:hover {
+.project-button:hover {
 	background-color: #e74246;
 }
 
-.gallery-focus button:active {
+.project-button:active {
 	background-color: #d7373b;
 }
 
@@ -1410,6 +1413,7 @@ a.up-dir {
   width: 50px;
   text-align: center;
   line-height: 50px;
+  border-radius: 5px;
 }
 
 .pagination-item a:hover,
