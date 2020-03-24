@@ -855,6 +855,8 @@ a {
 	width: 760px;
  	height: 118px;
  	border: 2px solid #d7dcde;
+ 	padding-left: 15px;
+    padding-top: 14px;
 }
 
 .popup .button {
