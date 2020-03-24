@@ -870,6 +870,15 @@ a {
 	border-radius: 5px;
 }
 
+.popup .button:hover {
+	background-color: #e74246;
+}
+
+.popup .button:active {
+	color: rgba(255,255,255,0.3);
+	background-color: #d7373b;
+}
+
 /*страница каталога*/
 
 .top-section {
