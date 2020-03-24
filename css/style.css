@@ -192,8 +192,9 @@ a {
   	display: flex; 
   	flex-direction: column; 
   	justify-content: center;
-  	height: 430px;
-  	padding-bottom: 9px;
+  	min-height: 430px;
+  	padding-top: 50px;
+  	padding-bottom: 59px;
   }
 
 .slide-1 {
@@ -221,7 +222,7 @@ a {
 }
 
 .slide-title {
-  	width: 700px;  
+  	width: 600px;  
   	font-size: 55px;
   	line-height: 55px;
   	font-weight: 500;
@@ -273,6 +274,7 @@ a {
 .offer-main {
 	display: flex;
 	flex-direction: column;
+	width: 300px;
 	margin: 0;
 	margin-right: 60px;
 }
@@ -291,7 +293,7 @@ a {
 }
 
 .offer-main p {
-	width: 244px;
+	width: 250px;
 	margin: 0;
 	margin-bottom: 32px;
 }
@@ -572,7 +574,7 @@ a {
 	top: 54px;
 	left: 50%;
  	width: 319px;
- 	height: 308px;
+ 	min-height: 308px;
  	z-index: 1;
  	margin-left: -580px;
 }
@@ -592,7 +594,7 @@ a {
 
 .contacts .address {
 	color: #666666;
-	line-height: 16px;
+	line-height: 18px;
 	margin-bottom: 21px;
 }
 
@@ -640,7 +642,6 @@ a {
 
 .social {
 	display: flex;
-	height: 79px;
 }
 
 .social ul {
@@ -718,7 +719,6 @@ a {
 	flex-direction: column;
 	margin-left: 140px;
 	width: 761px;
-	height: 53px;
 }
 
 .footer .cta {
@@ -736,7 +736,7 @@ a {
 }
 
 .popup {
-	display: none; 
+	display: block; 
 	background-color: #ffffff;
 	top: 50%;
 	left: 50%;
@@ -870,14 +870,17 @@ a {
 
 /*страница каталога*/
 
+.top-section {
+	background-color: #eeeeee;
+}
+
 .catalog-title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 245px;
+	display: block;
+	height: 245px;
 	margin: 0;
 	margin-bottom: 51px;
-	padding-bottom: 40px;
+	padding-top: 75px;
+    padding-left: 216px;
 	font-size: 55px;
 	line-height: 55px;
 	font-weight: 500;
@@ -1303,6 +1306,7 @@ a.up-dir {
 }
 
 .project-button:active {
+	color: rgba(255,255,255,0.3);
 	background-color: #d7373b;
 }
 
@@ -1314,9 +1318,9 @@ a.up-dir {
 .gallery-focus {
 	display: block; 
 	margin: 0;	
-	padding-top: 35px;
-	padding-left: 67px;
-	padding-right: 67px;
+	padding-top: 31px;
+    padding-left: 50px;
+	padding-right: 50px;
 	padding-bottom: 43px;
 
 	position: absolute;
@@ -1340,18 +1344,25 @@ a.up-dir {
 	color: #000000;
 }
 
+.project-name {
+	display: inline-block;
+	margin-bottom: 22px;
+}
+
 .gallery-focus p {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 16px;
 	color: #666666;
+	margin-top: 0;
+	margin-bottom: 33px;
 }
 
-.gallery-focus a:hover {
+a.project-name:hover {
 	color: #fb565a;
 }
 
-.gallery-focus a:active {
+a.project-name:active {
 	color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1366,6 +1377,7 @@ a.project-button {
   	background-color: #fb565a;
   	border: 1px solid #fb565a;
   	border-radius: 5px;
+  	margin: 0 auto;
 }
 
 .pagination-list {
